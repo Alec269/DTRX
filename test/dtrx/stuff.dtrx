@@ -1,0 +1,21 @@
+
+component UserProfile(required String name, int age = 18) {
+  return (
+    <Center>
+      <div style="width: 200px; height: 150px;">
+        <Text value="Hello" />
+        <Button icon={Icon(Icons.ac_unit)} onPressed={() => print("Hello")} />
+      </div>
+    </Center>
+  );
+}
+
+component Clicker() {
+  signal int count = 0;
+  return (
+    <Column>
+      <Text value="Count: {count}" />
+      <Button text="Add" onPressed={() => count++} />
+    </Column>
+  );
+}

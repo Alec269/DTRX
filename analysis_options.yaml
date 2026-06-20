@@ -1,0 +1,19 @@
+include: package:lints/recommended.yaml
+
+formatter:
+  page_width: 100
+
+linter:
+  rules:
+    - camel_case_types
+
+analyzer:
+  exclude:
+    - test/dtrx/**
+    - test/flutter_example/**
+
+# For more information about the core and recommended set of lints, see
+# https://dart.dev/go/core-lints
+
+# For additional information about configuring this file, see
+# https://dart.dev/tools/analysis
