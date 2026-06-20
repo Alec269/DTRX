@@ -12,7 +12,7 @@ DTRX is a declarative, component-driven language extension built specifically fo
 - ⚛️ **Signal Reactivity:** Bind component state to layout nodes with absolute zero boilerplate.
 - 📦 **Virtual Tag Layer:** High-level tags like `<Button>` dynamically resolve to specific optimized widgets at compile time based on your passing attributes.
 - 🎨 **Web-Inspired Layouts:** Familiar `<div>` and `<span>` primitive blocks coupled with semantic inline CSS styles compile straight to production-ready layout trees.
-- 🛠️ **Pure Dart Pipeline:** Built entirely with a custom, handwritten compiler pipeline (Lexer ──> Parser ──> Resolver ──> Code Generator).
+- 🛠️ **Pure Dart Pipeline:** Built entirely with a custom compiler pipeline (Lexer ──> Parser ──> Resolver ──> Code Generator).
 
 ---
 
@@ -112,29 +112,38 @@ dart run dtrx path/to/component.dtrx
 
 ```
 
+### Transpile Multiple Files
+
+```bash
+dart run dtrx /path/to/component.dtrx /path/to/user_card.dtrx
+
+```
+
+- these will get compile to `/path/to/component.dtrx.dart` and `/path/to/user_card.dtrx.dart` , respectively.
+
 *This generates a `path/to/component.dtrx.dart` production source file.*
 
-### Watch a Directory for Live Reload Compilation
+### Watch a Directory for Live Reload Compilation (Planned)
 
 ```bash
 dart run dtrx watch lib/components/
 
 ```
 
-**warning**: *Currently, this feature has not been correctly implemented*.
+**warning**: *Currently, this feature has not been implemented*.
 
-### Run Diagnostic Type Checks Without Disk Emission
+### Run Diagnostic Type Checks Without Disk Emission (Planned)
 
 ```bash
 dart run dtrx --check path/to/component.dtrx
 
 ```
 
-**warning**: *Currently, this feature has not been correctly implemented*.
+**warning**: *Currently, this feature has not been implemented*.
 
 ---
 
 ## Technical Architecture & Grammar Specification
 
 For deep structural details regarding the hand-written compilation pipeline, semantic validation passes, or the complete language context grammar, please see the core documentation file:
-→ **[docs/spec.md](./docs/SPEC.md)**
+→ **[docs/spec.md](./doc/SPEC.md)**

@@ -1,0 +1,21 @@
+# .pubignore
+
+# Ignore local development configurations
+
+.idea/
+.vscode/
+
+# Ignore local builds or test caches
+build/
+
+.dart_tool/
+ignore/
+out/
+
+# Ignore internal design docs or rough drafts for your XML language
+
+examples/experimental/
+
+# Ignore private environment variables or keys
+
+.env
